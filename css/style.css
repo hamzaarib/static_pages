@@ -1,0 +1,533 @@
+@font-face {
+  font-family: edensor;
+  src: url(Edensor-FREE.otf);
+}
+:root {
+  --mainBackground: tomato;
+  --mainBackgroundSecond: rgba(0, 0, 0,0.88);
+  --mainBackgroundThird: orangered;
+  --textColore:#eee;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: edensor;
+}
+/* ===== nav bar ===== */
+.naving {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--mainBackgroundSecond);
+  box-shadow: 2px 10px 21px rgb(54, 54, 54);
+  position: fixed;
+  width: 100%;
+  height: 15vh;
+  z-index: 1;
+}
+.naving > div a .logo {
+  height: 70px;
+}
+.naving > ul {
+  list-style: none;
+  display: flex;
+}
+.naving > ul li {
+  margin: 0 30px;
+  position: relative;
+}
+.naving > ul li a {
+  text-decoration: none;
+  color: var(--textColore);
+  padding: 10px 20px;
+  border: 2px solid var(--mainBackgroundThird);
+  border-radius: 30px;
+  transition:0.5s ease;
+}
+.naving > ul li a:hover {
+  background: linear-gradient(var(--mainBackground), var(--mainBackgroundThird));
+  color: white;
+}
+.fa-cart-shopping {
+  color: var(--mainBackground);
+  cursor: pointer;
+  font-size: 20px;
+}
+.naving > ul li .quantity {
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    color:var(--textColore);
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 10px;
+}
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.header .card1 {
+  position: fixed;
+  top: 0;
+  /* left: calc(100% - 500px); */
+  left: 100%;
+  width: 400px;
+  background-image: linear-gradient(to right,var(--mainBackgroundThird), var(--mainBackgroundSecond));
+  height: 100vh;
+  transition: 0.5s;
+  overflow-x: scroll;
+  z-index: 2;
+}
+.header .card1 h1 {
+  color: var(--textColore);
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  height: 80px;
+  display: flex;
+  text-align: center;
+}
+.header .card1 .checkout1 {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.header .card1 .checkout1 div {
+  background-color: var(--mainBackground);
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--textColore);
+  padding: 20px;
+}
+.header .card1 .checkout1 div:nth-child(2) {
+  background-color: var(--mainBackgroundSecond);
+}
+.active .card1 {
+  left: calc(100% - 400px);
+}
+.active .naving {
+  transform: translateX(-400px);
+}
+.header > .slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+.header > .slider .slide,
+.header > .slider .slide1,
+.header > .slider .slide2 {
+  min-width: 100%;
+  height: 100vh;
+  background-image: url("../img/vegetable.jpeg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-top: 35vh;
+}
+.header > .slider .slide1 {
+  background-image: url("../img/vegetable1.jpeg");
+}
+.header > .slider .slide2 {
+  background-image: url("../img/vegetable2.jpeg");
+}
+.header > .slider .title {
+  color: var(--textColore);
+  font-size: 50px;
+  font-weight: 900;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+}
+.header > .slider .text {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px;
+}
+.header > .slider .btn, .third > .content .btn, .fourth > .container .btn {
+  background-color: var(--mainBackground);
+  color: var(--textColore);
+  border: 2px solid var(--mainBackground);
+  padding: 10px 60px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.header > .slider .btn:hover, .third > .content .btn:hover, .fourth > .container .btn:hover {
+  background-color: var(--mainBackgroundThird);
+  transform: scale(1.1);
+  border: none;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  transition: 0.55s;
+  cursor: pointer;
+}
+/* ===== first section ===== */
+.first > .content > .title, .third > .content .title, .fourth > .container .title {
+  margin-top: 50px;
+  text-align: center;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  font-weight: 700;
+  font-size: 40px;
+}
+.first > .content > .text, .third > .content .text, .fourth > .container .text {
+  margin: auto;
+  color: var(--mainBackgroundSecond);
+  max-width: 900px;
+  font-size: 20px;
+  padding-top: 20px;
+}
+.first > .icon {
+  margin: 20px auto;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  column-gap: 20px;
+  justify-content: space-between;
+}
+.first > .icon span {
+  color: grey;
+  padding: 20px;
+  text-align: center;
+}
+.first > .icon span i {
+  color: gainsboro;
+  display: block;
+  padding: 10px;
+  font-size: 40px;
+}
+.first > .icon span:hover {
+  transform: scale(1.1);
+  transition: all 0.2s 0.11s ease-in;
+  color: var(--mainBackgroundThird);
+}
+/* =====second section ===== */
+.second {
+  margin-top: 40px;
+  margin-bottom: 400px;
+  /* height: 250vh; */
+  background-image: url("../img/pepper.png");
+  background-repeat: no-repeat;
+  background-size: 150px;
+  background-position: left top;
+}
+.second > .list {
+  display: grid;
+  grid-template-columns: repeat(4, 23%);
+  gap: 2%;
+  padding-left: 2%;
+  /* display: none; */
+}
+.second > .list .item {
+  font-size: 30px;
+  /* display: none; */
+  background-color: white;
+
+}
+.second >.show {
+  display: block;
+  background-color: red;
+}
+.second > .list .item .image {
+  border: 1px solid gainsboro;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: -10px;
+}
+.second > .list .item .image img {
+  width: 100%;
+  height: 200px;
+}
+.second > .list .item .card--content {
+  background-color: #fafafa;
+  color: var(--mainBackgroundSecond);
+  justify-content: space-around;
+  padding: 30px 0 50px 0;
+}
+.second > .list .item .card--content .title {
+  display: flex;
+  justify-content: space-around;
+}
+.second > .list .item .card--content .title small {
+  padding: 10px;
+  font-size: large;
+  color: rgb(75, 65, 65);
+}
+.second > .list .item .card--content .star {
+  display: flex;
+  justify-content: start;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+.second > .list .item .card--content .star img {
+  width: 20px;
+}
+.second > .list .item .card--content .view {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+  font-size: 20px;
+}
+.second > .list .item .card--content .view span {
+  color: gainsboro;
+  margin-left: -20px;
+}
+.second > .list .item .card--content .view button {
+  background-color: gainsboro;
+  padding: 10px;
+  border-radius: 100%;
+  border: none;
+}
+/* ======third section ===== */
+.third {
+  height: 150vh;
+  background-color: var(--mainBackgroundSecond);
+}
+.third > .content .title {
+  color: var(--textColore);
+  padding-top: 30px;
+}
+.third > .content .text {
+  color: var(--textColore);
+}
+.third > .content {
+  text-align: center;
+}
+.third > .content .btn, .fourth > .container .btn {
+  margin-top: 20px;
+  padding: 5px 10px;
+  text-transform: lowercase;
+}
+.third > .content .images {
+  margin: 70px auto;
+  width: 90%;
+  height: 75vh;
+  display: grid;
+  grid-template-columns: 19% 17% 17% 29% 14%;
+  gap: 2% 1%;
+  grid-template-rows: 25% 25% 50%;
+}
+.third > .content .images .img_1,
+.img_2,
+.img_3,
+.img_4,
+.img_5,
+.img_6,
+.img_7,
+.img_8 {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+}
+.third > .content> .images .img_1:hover,
+.img_2:hover,
+.img_3:hover,
+.img_4:hover,
+.img_5:hover,
+.img_6:hover,
+.img_7:hover,
+.img_8:hover {
+  transform: scale(1.02);
+}
+.third > .content .images .img_2 {
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
+.third > .content .images .img_3 {
+  grid-column: 4/5;
+  grid-row: 1/3;
+}
+.third > .content .images .img_5 {
+  grid-row: 2/4;
+}
+.third > .content .images .img_6 {
+  grid-column: 2/3;
+}
+.third > .content .images .img_7 {
+  grid-column: 3/5;
+}
+.third > .content .images .img_8 {
+  grid-row: 2/4;
+}
+/* ===== fourth section ===== */
+.fourth > .container {
+    margin-top: 10vh;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 11px;
+}
+.fourth > .container .content {
+  max-width: 300px;
+}
+.fourth > .container .content .text{
+  font-size: 11px;
+}
+.fourth > .container .image img {
+    width: 40%;
+}
+/* ===== footer ===== */
+.footer {
+    height: 50vh;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+} 
+.footer > div h3 {
+    color: var(--mainBackgroundThird);
+}
+.footer > div p {
+    font-weight: bold;
+    padding: 30px 0;
+    color: grey;
+}
+.footer > div a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: gray;
+    padding:10px;
+    border: 2px solid;
+}
+.footer > div > a:hover {
+    background-color: gray;
+    color: var(--mainBackgroundSecond);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.footer >.date{
+    margin-top: 50px;/
+}
+.footer >.date p {
+    line-height: 30px;
+}
+.footer > .contact {
+    margin-bottom: 70px;
+}
+.footer > .contact i {
+    font-size: 20px;
+    color: gray;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+.footer > .contact > i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: var(--mainBackgroundThird);
+}
+#btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: var(--mainBackground);
+    border-radius: 100%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: var(--textColore);
+    font-weight: 900;
+    font-size: 20px;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .list .item {
+  text-align: center;
+  background-color: #DCE0E1;
+  padding: 20px;
+  box-shadow: 0 50px 50px #757676;
+  letter-spacing: 1px;
+}
+
+.list .item img {
+  width: 90%;
+} */
+
+/* .list .item .title {
+  font-weight: 600;
+}
+
+.list .item .price {
+  margin: 10px;
+}
+
+.list .item button {
+  background-color: #1C1F25;
+  color: white;
+  padding: 10px;
+  width: 100%;
+} */
+
+.listCard1 li{
+  display: grid;
+  grid-template-columns: 100px repeat(3, 1fr);
+  color: white;
+  row-gap: 10px;
+  margin-bottom: 20px;
+  /* border:2px solid #000; */
+}
+
+.listCard1 li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border:2px solid #000; */
+}
+
+.listCard1 li img {
+  border: 2px solid black;
+  width: 100%;
+  border-radius: 100%;
+}
+
+.listCard1 button {
+  width: auto;
+  background-color: var(--textColore);
+  border: none;
+  width: 20%;
+}
+.listCard1 button:hover{
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.listCard1 .count {
+  margin: 10px 10px;
+
+} 
+
+.listCard1 .image {
+  max-width: 80px;
+  height: 80px;
+  /* text-align: center; */
+  padding-left: 10px;
+}
+
+

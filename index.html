@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="naving">
+      <div>
+        <a href="#"><img class="logo" src="./img/logo.png" alt="" /></a>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="shopping1">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="quantity">0</span>
+        </li>
+      </ul>
+    </nav>
+    <header class="header">
+      <div class="card1">
+        <h1>Card1</h1>
+        <ul class="listCard1"></ul>
+        <div class="checkout1">
+          <div class="total1">0</div>
+          <div class="closeShopping">close</div>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="slide">
+          <h1 class="title">The Best Vegetable is Here</h1>
+          <p class="text">New Arrivals On Sale</p>
+          <button class="btn">See more</button>
+        </div>
+        <div class="slide1">
+          <h1 class="title">Biggest Discount</h1>
+          <p class="text">Check the promotion</p>
+          <button class="btn">See more</button>
+        </div>
+        <div class="slide2">
+          <h1 class="title">Biggest Sale</h1>
+          <p class="text">Dont Miss it that</p>
+          <button class="btn">See more</button>
+        </div>
+      </div>
+    </header>
+    <section class="first">
+      <div class="content">
+        <h1 class="title">Our Products</h1>
+        <p class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+          doloribus deserunt consectetur. Accusamus ullam voluptate eaque
+          temporibus expedita alias quo at maiores, voluptas voluptates
+          similique culpa ut architecto quisquam in.
+        </p>
+      </div>
+      <div class="icon">
+        <span onclick="showAll()"><i class="fa-solid fa-carrot"></i>Show all</span>
+        <span onclick="filterByCategory('butter egges')"><i class="fa-solid fa-egg"></i>Butter & Egges</span>
+        <span onclick="filterByCategory('vegetables')"><i class="fa-solid fa-carrot"></i>Vegetables</span>
+        <span onclick="filterByCategory('cheeses')"><i class="fa-solid fa-cheese"></i>Cheeses</span>
+        <span onclick="filterByCategory('bread')"><i class="fa-solid fa-bread-slice"></i>Bread</span>
+        <span onclick="filterByCategory('fruits')"><i class="fa-solid fa-apple-whole"></i>Fruits</span>
+      </div>
+    </section>
+    <section class="second">
+      <div class="list"></div>
+    </section>
+    <section class="third">
+      <div class="content">
+        <h1 class="title">Our Industry</h1>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+          minima placeat dolores quidem hic ut doloribus facere ipsa cupiditate
+          assumenda! Est rem harum, non beatae odit esse architecto. Nam, porro?
+        </p>
+        <button class="btn">See more</button>
+        <div class="images">
+          <img class="img_1" src="./img/all_2.jpeg" />
+          <img class="img_2" src="./img/all_1.webp" />
+          <img class="img_3" src="./img/all_3.webp" />
+          <img class="img_4" src="./img/all_4.webp" />
+          <img class="img_5" src="./img/all_5.webp" />
+          <img class="img_6" src="./img/all_6.jpeg" />
+          <img class="img_7" src="./img/all_8.jpeg" />
+          <img class="img_8" src="./img/all_7.webp" />
+        </div>
+      </div>
+    </section>
+    <section class="fourth">
+      <div class="container">
+        <div class="content">
+          <h1 class="title">Our Products</h1>
+          <p class="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            doloribus deserunt consectetur. Accusamus ullam voluptate eaque
+            temporibus expedita alias quo at maiores, voluptas voluptates
+            similique culpa ut architecto quisquam in.
+          </p>
+          <button class="btn">See more</button>
+        </div>
+        <div class="image">
+          <img src="./img/fruit.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div>
+        <h3>Location</h3>
+        <p><i class="fa-solid fa-location-dot"></i> Hay azhar rue 34</p>
+        <a href="#">Deriction</a>
+      </div>
+      <div class="date">
+        <h3>Opening Hours</h3>
+        <p>
+          Monday - Friday <br />
+          9:00 AM - 23:00 PM<br />
+          Saturday - Sanday <br />
+          10:00 AM - 00:00 PM
+        </p>
+      </div>
+      <div class="contact">
+        <h3>Contact Us</h3>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-regular fa-envelope"></i>
+      </div>
+    </footer>
+    <button id="btn"><i class="fa-solid fa-angles-up fa-bounce"></i></button>
+    <!-- <script src="./js/bootstrap.bundle.min.js"></script> -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
